@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        padding: 0;
+        margin: 0;
+       }
+
+        #div{
+        position: absolute;
+         top: 30px;
+        right: 50px;
+        width: 50%;
+        height: 90vh;
+        /* background-image: url(log.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; */
+        backdrop-filter: blur(10px);
+        transition: all 2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        
+    }
+    #side{
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        color:white;
+        background-color: black;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: none;
+        cursor: pointer;
+
+    }
+    #goback{
+        width: 150px;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        color:white;
+        background-color: black;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .login
+    {
+        width: 100%;
+        height: 100vh;
+        background-image: url(pics/pubg.jpg);
+        /* object-fit: cover; */
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+    .login .log{
+        width:30% ;
+        height: 50vh;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        border-radius: 20px;
+        
+    }
+    .login .sign{
+        width:30% ;
+        height: 60vh;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        border-radius: 20px;
+    }
+    input{
+        width: 300px;
+        height: 20px;
+        padding: 10px;
+        border-radius: 15px;
+        border: none;
+        outline: none;
+
+    }
+    .area{
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .submit{
+        padding: 15px;
+        width: 100px;
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    transition: all .5s linear;
+    text-transform: uppercase;
+    font-weight: 500;
+    }
+   .submit:hover{
+    background-color: white;
+    color: black;
+   }
+   .log h1{
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+   }
+   .sign h1{
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+   }
+   .log button{
+    padding: 15px;
+    width: 100px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    
+    a{
+        text-decoration: none;
+        color: black;
+    }
+   }
+   .sign button{
+    padding: 15px;
+    width: 100px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    
+    a{
+        text-decoration: none;
+        color: black;
+    }
+   }
+    </style>
+</head>
+<body>
+    
+
+
+    <form action="log.php" method="post">
+    <div class="login">
+    
+
+        <div class="log">
+            <h1>Login </h1>
+            <input type="text" placeholder="Enter your email" class="input" required>
+            <input type="password" placeholder="Enter your password" required>
+            <Button><a href="main.html">Login</a></Button>
+        </div>
+        <div class="sign">
+            <h1>Sign up</h1>
+            <input type="text" placeholder="Email" class="input" required>
+            <input type="text" placeholder="name" required>
+            <input type="tel"  placeholder ="mobile no" id="" required>
+            <input type="password" placeholder="Enter your password" required>
+            <button id="login">Sign up</button>
+        </div>
+    </div>
+
+    <div id="div">
+        <button id="side">LOGIN</button>
+        <button id="goback">SIGNUP</button>
+    </div>
+   
+</form>
+
+
+
+
+
+    <script>
+        var box=document.getElementById("div")
+        var slide=document.getElementById("side")
+        var back=document.getElementById("goback")
+        slide.addEventListener("click",function(){
+            box.style.translate="0px";
+            back.style.display="block";
+            slide.style.display="none";
+
+        })
+        back.addEventListener("click",function(){
+            box.style.translate="-680px";
+            back.style.display="none";
+            slide.style.display="block";
+        })
+
+        document.getElementById("login").addEventListener("click",function()
+    {
+        box.style.translate="0px";
+            back.style.display="block";
+            slide.style.display="none";
+    })
+        
+    </script>
+     
+</body>
+
+
+</html>
